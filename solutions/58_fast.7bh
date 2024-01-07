@@ -1,0 +1,89 @@
+-- 7 Billion Humans (2235) --
+-- 58: Good Neighbors --
+
+-- 157/175
+
+a:
+b:
+mem1 = nearest datacube
+if n == wall or
+ e == wall or
+ s == wall or
+ w == wall:
+	end
+endif
+pickup mem1
+mem2 = nearest wall
+step mem2
+c:
+d:
+e:
+f:
+if c == datacube:
+	if s == wall:
+		if w == wall:
+			jump g
+		endif
+		step w
+		jump c
+	endif
+	if w == wall:
+		g:
+		if n == wall:
+			jump h
+		endif
+		step n
+		jump d
+	endif
+	if n == wall:
+		h:
+		if e == wall:
+			jump i
+		endif
+		step e
+		jump e
+	endif
+	i:
+	step s
+	jump f
+endif
+drop
+mem3 = set 0
+if mem4 != 0:
+	step mem4
+	jump a
+endif
+if mem2 == s:
+	j:
+	step n
+	mem3 = calc mem3 + 1
+	if mem3 < 5:
+		jump j
+	endif
+endif
+if mem2 == n:
+	k:
+	step s
+	mem3 = calc mem3 + 1
+	if mem3 < 5:
+		jump k
+	endif
+endif
+if mem2 == w:
+	l:
+	step e
+	mem3 = calc mem3 + 1
+	if mem3 < 6:
+		jump l
+	endif
+else:
+	m:
+	step w
+	mem3 = calc mem3 + 1
+	if mem3 < 6:
+		jump m
+	endif
+endif
+jump b
+
+

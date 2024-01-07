@@ -1,0 +1,38 @@
+-- 7 Billion Humans (2235) --
+-- 31: Checkerboard Organization --
+
+-- 20/7, 494/100
+
+mem1 = nearest printer
+a:
+if myitem != datacube:
+	takefrom mem1
+endif
+if e == hole:
+	step nw,w,sw,n,s,ne,se
+else:
+	if n == hole:
+		step nw,w,sw,s,ne,e,se
+	else:
+		if w == hole:
+			step nw,sw,n,s,ne,e,se
+		else:
+			if s == hole:
+				step nw,w,sw,n,ne,e,se
+			else:
+				step w,n,s,e
+			endif
+		endif
+	endif
+endif
+if c == nothing:
+	if nw == datacube or
+	 ne == datacube or
+	 se == datacube or
+	 sw == datacube:
+		drop
+	endif
+endif
+jump a
+
+

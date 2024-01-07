@@ -1,0 +1,22 @@
+-- 7 Billion Humans (2235) --
+-- 36: Seek and Destroy 2 --
+
+-- 10/10
+
+mem1 = nearest shredder
+mem2 = set nothing
+a:
+if n == wall:
+	pickup mem2
+	giveto mem1
+	mem2 = set nothing
+endif
+if n == datacube and
+ mem2 == nothing or
+ n < mem2:
+	mem2 = set n
+endif
+step n
+jump a
+
+

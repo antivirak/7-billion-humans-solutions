@@ -1,0 +1,21 @@
+-- 7 Billion Humans (2235) --
+-- 50: Cubical Communication --
+
+-- 11/12
+
+mem1 = nearest datacube
+mem2 = nearest printer
+mem3 = nearest shredder
+a:
+mem4 = set 0
+b:
+if mem4 != mem1:
+	mem4 = calc mem4 + 1
+	takefrom mem2
+	jump b
+endif
+giveto mem3
+mem1 = calc mem1 + 3
+jump a
+
+

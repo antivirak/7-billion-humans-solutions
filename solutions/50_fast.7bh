@@ -1,0 +1,136 @@
+-- 7 Billion Humans (2235) --
+-- 50: Cubical Communication --
+
+-- 33/60
+
+mem1 = nearest datacube
+mem2 = nearest printer
+mem3 = nearest shredder
+if mem1 == 1:
+	a:
+	takefrom mem2
+	giveto mem3
+	step w
+	step e
+	step w
+	step e
+	takefrom mem2
+	giveto mem3
+	step w
+	step e
+	step w
+	step e
+	takefrom mem2
+	giveto mem3
+	step w
+	step e
+	step w
+	step e
+	takefrom mem2
+	giveto mem3
+	step w
+	step e
+	step w
+	step e
+	takefrom mem2
+	giveto mem3
+endif
+if mem1 == 2:
+	b:
+	step w
+	step e
+	step w
+	step e
+	takefrom mem2
+	giveto mem3
+	step w
+	step e
+	step w
+	step e
+	takefrom mem2
+	giveto mem3
+	step w
+	step e
+	step w
+	step e
+	takefrom mem2
+	giveto mem3
+	step w
+	step e
+	step w
+	step e
+	takefrom mem2
+	giveto mem3
+	step w
+	step e
+	step w
+	step e
+	takefrom mem2
+	giveto mem3
+	tell everyone go
+endif
+listenfor go
+if mem1 == 3:
+	jump a
+	takefrom mem2
+	giveto mem3
+	step e
+	step w
+	step e
+	step w
+	takefrom mem2
+	giveto mem3
+	step e
+	step w
+	step e
+	step w
+	takefrom mem2
+	giveto mem3
+	step e
+	step w
+	step e
+	step w
+	takefrom mem2
+	giveto mem3
+	step e
+	step w
+	step e
+	step w
+	takefrom mem2
+	giveto mem3
+endif
+if mem1 == 4:
+	jump b
+	step e
+	step w
+	step e
+	step w
+	takefrom mem2
+	giveto mem3
+	step e
+	step w
+	step e
+	step w
+	takefrom mem2
+	giveto mem3
+	step e
+	step w
+	step e
+	step w
+	takefrom mem2
+	giveto mem3
+	step e
+	step w
+	step e
+	step w
+	takefrom mem2
+	giveto mem3
+	step e
+	step w
+	step e
+	step w
+	takefrom mem2
+	giveto mem3
+endif
+
+

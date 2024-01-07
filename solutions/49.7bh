@@ -1,0 +1,16 @@
+-- 7 Billion Humans (2235) --
+-- 49: Double Sided Destruction --
+
+-- 6/7, 14/17
+
+mem1 = nearest shredder
+pickup s
+a:
+if w == worker and
+ e == worker:
+	jump a
+endif
+giveto mem1
+step se
+
+

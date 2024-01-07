@@ -1,0 +1,137 @@
+-- 7 Billion Humans (2235) --
+-- 64: Binary Counter --
+
+-- 89/17, 87/54
+
+if w == datacube:
+	step sw
+	a:
+	mem1 = set 0
+	pickup n
+	drop
+	if mem1 == 0:
+		b:
+		c:
+		d:
+		e:
+		f:
+		g:
+		step se
+		step nw
+		mem1 = calc mem1 + 1
+		if mem1 == 2:
+			jump h
+		endif
+		if mem1 == 3:
+			jump i
+		endif
+		if mem1 == 4:
+			jump j
+		endif
+		if mem1 == 5:
+			jump k
+		endif
+		if mem1 == 6:
+			jump l
+		endif
+		if mem1 == 7:
+			jump m
+		endif
+	endif
+	if mem1 == 2:
+		n:
+		jump n
+	endif
+	o:
+	p:
+	q:
+	pickup c
+	step n
+	drop
+	step s
+	if mem1 == 3:
+		jump r
+	endif
+	if mem1 == 5:
+		jump s
+	endif
+	if mem1 == 7:
+		jump t
+	endif
+	u:
+	pickup nw
+	step w
+	drop
+	step e
+	if mem1 == 1:
+		jump b
+		h:
+		pickup n
+		drop
+		jump c
+		i:
+	endif
+	if mem1 == 3:
+		jump o
+		r:
+	endif
+	if mem1 == 5:
+		jump v
+	endif
+	w:
+	step w
+	pickup c
+	step n
+	drop
+	step se
+	if mem1 == 7:
+		jump x
+	endif
+	step w
+	step w
+	pickup n
+	drop
+	step e
+	step e
+	if mem1 == 3:
+		jump d
+		j:
+		pickup n
+		drop
+		jump e
+		k:
+		jump p
+		s:
+		jump u
+		v:
+		jump f
+		l:
+		pickup n
+		drop
+		jump g
+		m:
+		jump q
+		t:
+		jump w
+		x:
+	endif
+	step w
+	step nw
+	pickup s
+	drop
+	step se
+	step e
+	step w
+	step w
+	step w
+	pickup n
+	drop
+	step e
+	step e
+	step e
+	step se
+	step nw
+	jump a
+endif
+
+

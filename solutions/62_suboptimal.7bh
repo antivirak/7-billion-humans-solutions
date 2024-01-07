@@ -1,0 +1,144 @@
+-- 7 Billion Humans (2235) --
+-- 62: The Sorting Floor --
+
+-- 107/48, 349/174
+
+if sw == hole:
+	step sw
+endif
+a:
+b:
+if nw != hole:
+	step nw
+	jump a
+endif
+c:
+if n != hole:
+	step n
+	jump c
+endif
+mem3 = set 0
+if c != datacube:
+	if nw == hole and
+	 n == hole and
+	 w == hole:
+		mem1 = set 99
+	endif
+	jump d
+endif
+mem1 = set c
+e:
+f:
+if c < mem1:
+	mem1 = set c
+endif
+d:
+if e == hole and
+ mem3 != 2:
+	step sw
+	step w
+	mem3 = calc mem3 + 1
+	jump f
+else:
+	if mem3 == 2 and
+	 e == hole:
+		mem2 = calc mem2 + 1
+		pickup mem1
+		g:
+		if sw != hole:
+			step sw
+			jump g
+		endif
+		h:
+		if s != hole:
+			step s
+			jump h
+		endif
+		if mem2 == 1:
+			step n
+			step n
+		endif
+		if mem2 == 2:
+			step ne
+			step n
+		endif
+		if mem2 == 3:
+			step ne
+			step ne
+		endif
+		if mem2 == 4:
+			step n
+		endif
+		if mem2 == 5:
+			step ne
+		endif
+		if mem2 == 6:
+			step ne
+			step e
+		endif
+		if mem2 == 8:
+			step e
+		endif
+		if mem2 == 9:
+			step ne
+			step ne
+			step n
+			drop
+			step w
+			pickup sw
+			step nw
+			step n
+			drop
+			step s
+			step s
+			pickup se
+			step n
+			step ne
+			drop
+			step s
+			step s
+			pickup se
+			step n
+			step ne
+			drop
+			step s
+			step s
+			step s
+			pickup s
+			step n
+			step n
+			drop
+			step s
+			step s
+			pickup sw
+			step n
+			step nw
+			drop
+			step s
+			step s
+			pickup sw
+			step n
+			step nw
+			drop
+			step s
+			step s
+			step s
+			pickup s
+			step n
+			step n
+			drop
+			step s
+			step s
+			pickup se
+			step n
+			step ne
+			drop
+		endif
+		drop
+		jump b
+	endif
+endif
+step e
+jump e
+
+

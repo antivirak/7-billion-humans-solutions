@@ -1,0 +1,20 @@
+-- 7 Billion Humans (2235) --
+-- 7: Collation Station --
+
+-- 6/6
+
+a:
+step s
+if s == datacube:
+	pickup s
+else:
+	jump a
+endif
+b:
+step s
+if s != hole:
+	jump b
+endif
+drop
+
+

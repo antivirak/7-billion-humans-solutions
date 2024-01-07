@@ -1,0 +1,22 @@
+-- 7 Billion Humans (2235) --
+-- 43: Multiplication Table --
+
+-- 11/11, 67/53
+
+a:
+step n
+if c == datacube or
+ s != datacube:
+	jump a
+endif
+mem1 = set n
+b:
+mem2 = calc mem2 + 1
+step s
+pickup c
+mem3 = calc mem1 x mem2
+write mem3
+drop
+jump b
+
+
